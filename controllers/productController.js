@@ -34,14 +34,21 @@ async function getProduct(req, res, id) {
 //@route    Post /api/products
 async function createProduct(req, res) {
   try {
-    const product = {
-      title: "Add new product ",
-      description: "This is product description section",
-      price: 44,
-    };
-    const newProduct = await Product.create(product);
-    res.writeHead(201, { "Content-Type": "application/json" });
-    res.writeHead(JSON.stringify(product));
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.stringify();
+    });
+    req.on("end", () => {
+      const { name, description, price } = JSON.parse(body);
+      const product = {
+        name: "Add new product ",
+        description: "This is product description section",
+        price: 44,
+      };
+      const newProduct = Product.create(product);
+      res.writeHead(201, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(newProduct));
+    });
   } catch (error) {
     console.log(error);
   }
@@ -50,4 +57,5 @@ async function createProduct(req, res) {
 module.exports = {
   getProducts,
   getProduct,
+  createProduct,
 };
