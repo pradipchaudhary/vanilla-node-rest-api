@@ -1,0 +1,24 @@
+{
+  "name": "node_rest_api_no_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradipchaudhary/Node_REST_API_No_Framework.git"
+  },
+  "keywords": [],
+  "author": "Pradip Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradipchaudhary/Node_REST_API_No_Framework/issues"
+  },
+  "homepage": "https://github.com/pradipchaudhary/Node_REST_API_No_Framework#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
