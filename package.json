@@ -20,5 +20,8 @@
   "homepage": "https://github.com/pradipchaudhary/Node_REST_API_No_Framework#readme",
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
