@@ -1,4 +1,5 @@
 const http = require("http");
+// import controllers
 const {
   getProducts,
   getProduct,
@@ -31,6 +32,7 @@ const server = http.createServer((req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
+// Server Listening
 server.listen(5000, () => {
   console.log(`Server running on Port : ${PORT}`);
 });
